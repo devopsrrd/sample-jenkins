@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh 'cd /var/jenkins_home/workspace/petclinic/target'
-                sh 'java -jar "spring-petclinic-3.3.0-SNAPSHOT.jar"'
+                sh 'chmod +x spring-petclinic-3.3.0-SNAPSHOT.jar && java -jar spring-petclinic-3.3.0-SNAPSHOT.jar'
             }
         }
     }
