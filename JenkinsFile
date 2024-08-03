@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 cd target
-                java -jar spring-petclinic-3.3.0-SNAPSHOT.jar
+                java -jar "spring-petclinic-3.3.0-SNAPSHOT.jar"
             }
         }
     }
