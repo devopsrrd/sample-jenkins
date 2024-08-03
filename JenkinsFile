@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh 'export PATH=$PATH:"/apache-maven-3.9.8/bin"'
-                sh 'mvn clean install -DskipTests'
+                sh '/apache-maven-3.9.8/bin/mvn clean install -DskipTests'
             }
         }
         stage('Test') {
