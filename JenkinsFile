@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'cd target'
+                sh 'cd /var/jenkins_home/workspace/petclinic/target'
                 sh 'java -jar "spring-petclinic-3.3.0-SNAPSHOT.jar"'
             }
         }
