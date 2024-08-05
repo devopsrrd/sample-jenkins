@@ -16,7 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'java -jar ./target/spring-petclinic-3.3.0-SNAPSHOT.jar'
+                sh 'java -jar ./target/spring-petclinic-3.3.0-SNAPSHOT.jar &'
             }
         }
     }
