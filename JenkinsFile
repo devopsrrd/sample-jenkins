@@ -12,7 +12,7 @@ pipeline {
         stage('Create Docker Image') {
             steps {
                 echo 'Create Docker Image'
-                sh 'docker build -t springboot:1.0.0 .'
+                sh 'sudo docker build -t springboot:1.0.0 .'
             }
         }
         stage('Deploy') {
