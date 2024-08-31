@@ -12,14 +12,14 @@ pipeline {
         stage('Create Docker Image') {
             steps {
                 echo 'Create Docker Image'
-                sh 'sudo docker build -t springboot:1.0.0 .'
+                sh 'sudo docker build -t springboot:${BUILD_NUMBER} .'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
                 sh 'sudo docker rm -f springboot-01'
-                sh 'sudo docker run --name springboot-01 -d -p 8082:8080 springboot:1.0.0'
+                sh 'sudo docker run --name springboot-01 -d -p 8082:8080 springboot:${BUILD_NUMBER}'
             }
         }
     }
