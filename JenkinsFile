@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building...'        
                 sh 'whoami'       
-                sh '/home/ubuntu/apache-maven-3.9.9/bin/mvn -T 2 clean install -DskipTests'
+                //sh '/home/ubuntu/apache-maven-3.9.9/bin/mvn -T 2 clean install -DskipTests'
             }
         }
         stage('Create Docker Image') {
