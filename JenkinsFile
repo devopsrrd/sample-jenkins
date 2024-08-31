@@ -18,7 +18,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'sudo docker run -d -p 8082:8080 springboot:1.0.0'
+                sh 'sudo docker rm -f springboot-01'
+                sh 'sudo docker run --name springboot-01 -d -p 8082:8080 springboot:1.0.0'
             }
         }
     }
