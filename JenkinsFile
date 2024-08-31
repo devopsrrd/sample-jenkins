@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building...'               
+                echo 'Building...'        
+                sh 'whoami'       
                 sh '/home/ubuntu/apache-maven-3.9.9/bin/mvn clean install -DskipTests'
             }
         }
