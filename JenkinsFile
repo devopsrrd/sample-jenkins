@@ -8,9 +8,10 @@ pipeline {
                 sh '/home/ubuntu/apache-maven-3.9.9/bin/mvn clean install -DskipTests'
             }
         }
-        stage('Test') {
+        stage('Create Docker Image') {
             steps {
-                echo 'Testing..'
+                echo 'Create Docker Image'
+                sh 'docker build -t springboot:1.0.0 .'
             }
         }
         stage('Deploy') {
